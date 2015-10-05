@@ -1,0 +1,34 @@
+1.初始化版本库
+git init
+
+2. 查看版本库的状态
+git status
+
+3. 提交一个文件到暂存区
+git add xxx.txt
+提交所有文件
+git add .
+
+4. 将暂存区的内容提交到版本库
+git commit -m "这里是提交内容的注释" -- xxx.txt
+提交所有的文件
+git commit -a
+
+5. 查看git的历史记录
+查看文件日志
+git log
+查看所有历史日志
+git reflog --pretty=oneline
+
+6. 查看文件差别
+usage: git diff [<options>] [<commit> [<commit>]] [--] [<path>...]
+git diff 
+git diff HEAD -- xxx.txt
+git diff 6aa6034 c5feae7 -- readme.txt
+
+7. 将文件回退到版本库的指定版本
+git reset HEAD -- xxx.txt
+git reset 6aa6034 -- xxx.txt
+
+8. 撤销工作区相对于暂存区（stage）的修改（已经提交到暂存区的文件不会被撤销），需要与git reset 进行区别
+git checkout -- xxx.txt
