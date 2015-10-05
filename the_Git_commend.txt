@@ -32,3 +32,6 @@ git reset 6aa6034 -- xxx.txt
 
 8. 撤销工作区相对于暂存区（stage）的修改（已经提交到暂存区的文件不会被撤销），需要与git reset 进行区别
 git checkout -- xxx.txt
+
+9. 删除文件
+git rm xxx.txt
