@@ -1,0 +1,2 @@
+1、远程连接github的仓库。
+git remote add origin git@github.com:shenjian0826/freeFoxRepo.git
