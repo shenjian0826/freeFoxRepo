@@ -7,8 +7,21 @@
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
 
+出现冲突后，如何进行处理
+1、执行git merge 命令时，报如下错误
+$ git merge branch_one
+Auto-merging git_branch.txt
+CONFLICT (content): Merge conflict in git_branch.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+冲突的文件的内容如下：
 <<<<<<< HEAD
 这里是分支branch_two中增加的内容。
 =======
 这里是分支branch_one中增加的内容
 >>>>>>> branch_one
+
+解决完冲突后
+$ git add git_branch.txt
+$ git commit -m "submit with conflicts be dealed"
+***注意：如果不处理冲突，直接执行上面的两句，则冲突本身的文本也会被提交到版本库中***
